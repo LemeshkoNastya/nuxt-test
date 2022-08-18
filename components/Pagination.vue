@@ -170,6 +170,10 @@ export default {
       margin-right: 0;
       margin-left: 20px;
       transform: rotate(180deg);
+
+      &:hover {
+        background: linear-gradient(90deg, $pink 0%, $orange 100%);
+      }
     }
   }
 }
