@@ -1,6 +1,7 @@
 <template>
   <main class="app">
     <Table />
+    <Pagination />
   </main>
 </template>
 

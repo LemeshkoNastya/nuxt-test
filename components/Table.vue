@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      comments: "getComments",
+      comments: "showComments",
     }),
   },
   methods: {
