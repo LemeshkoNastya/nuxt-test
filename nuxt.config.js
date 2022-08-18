@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -51,5 +53,17 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    publicPath: "/nuxt-test/",
+  },
+
+  generate: {
+    routes: async function () {
+      const {
+        data: comments
+      } = await axios.get('https://jsonplaceholder.typicode.com/comments');
+
+      return comments.map(comment => `/comment/${comment.id}`);
+    }
+  },
 }
