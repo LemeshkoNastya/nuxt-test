@@ -47,7 +47,6 @@ export default {
 }
 
 .card {
-  //   margin: auto;
   padding: 30px;
   width: 280px;
   background: white;
