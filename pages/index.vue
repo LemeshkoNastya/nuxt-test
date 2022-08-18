@@ -30,7 +30,22 @@ body {
 }
 
 .app {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
   width: 80%;
+  height: calc(100vh - 100px);
+  overflow: auto;
+
+  @media (max-width: 1800px) {
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    margin: 20px auto;
+    width: 100%;
+  }
 }
 </style>

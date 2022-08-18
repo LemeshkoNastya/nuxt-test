@@ -1,19 +1,21 @@
 <template>
-  <div class="card">
-    <div class="card__content">
-      <p v-for="(valueComment, keyComment) in comment" :key="keyComment">
-        <span class="card__title">{{ keyComment }} :</span>
-        <a
-          v-if="keyComment === 'email'"
-          :href="`mailto:${valueComment}`"
-          class="card__title-link"
-          >{{ valueComment }}</a
-        >
-        <span v-else>{{ valueComment }}</span>
-      </p>
-    </div>
+  <div class="page-comment">
+    <div class="card">
+      <div class="card__content">
+        <p v-for="(valueComment, keyComment) in comment" :key="keyComment">
+          <span class="card__title">{{ keyComment }} :</span>
+          <a
+            v-if="keyComment === 'email'"
+            :href="`mailto:${valueComment}`"
+            class="card__title-link"
+            >{{ valueComment }}</a
+          >
+          <span v-else>{{ valueComment }}</span>
+        </p>
+      </div>
 
-    <NuxtLink to="/" class="card__link">Back to main page</NuxtLink>
+      <NuxtLink to="/" class="card__link">Back to main page</NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -36,8 +38,16 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.page-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
 .card {
-  margin: auto;
+  //   margin: auto;
   padding: 30px;
   width: 280px;
   background: white;

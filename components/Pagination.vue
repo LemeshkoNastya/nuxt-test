@@ -95,7 +95,7 @@ export default {
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
 
   &__button {
     margin-left: 10px;
@@ -105,8 +105,11 @@ export default {
     width: 40px;
     font-family: "Roboto", sans-serif;
     color: $secondary;
-
     cursor: pointer;
+
+    @media (max-width: 480px) {
+      margin-left: 5px;
+    }
 
     &:first-child {
       margin-left: 0;
@@ -151,6 +154,10 @@ export default {
     height: 40px;
     cursor: pointer;
 
+    @media (max-width: 480px) {
+      margin-right: 10px;
+    }
+
     &:hover {
       background: linear-gradient(90deg, $orange 0%, $pink 100%);
       border: 1px solid $primary;
@@ -173,6 +180,10 @@ export default {
 
       &:hover {
         background: linear-gradient(90deg, $pink 0%, $orange 100%);
+      }
+
+      @media (max-width: 480px) {
+        margin-left: 10px;
       }
     }
   }
