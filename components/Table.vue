@@ -31,7 +31,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="comment in comments" :key="comment.id" class="table__row">
+      <tr
+        v-for="comment in comments"
+        :key="comment.id"
+        @click.prevent="redirectPage(comment.id)"
+        class="table__row"
+      >
         <td class="table__cell">{{ comment.id }}</td>
         <td class="table__cell">{{ comment.name }}</td>
         <td class="table__cell">{{ comment.email }}</td>
@@ -61,6 +66,9 @@ export default {
       this.sortabled = !this.sortabled;
       this.sortComments(this.sortabled);
       if (!this.activeButtonSort) this.activeButtonSort = true;
+    },
+    redirectPage(id) {
+      this.$router.push(`/comment/${id}`);
     },
   },
 };
