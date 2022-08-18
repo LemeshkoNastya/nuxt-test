@@ -56,7 +56,7 @@ export default {
   build: {},
 
   router: {
-    base: '/test-build/'
+    base: '/nuxt-test/'
   },
 
   generate: {
